@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block body_content %}
+
+    <div class="contanier">
+        <div class="target">
+            <i class="fa-solid fa-house home"></i>
+            <span class="arrow2">></span>
+            <span class="ls">Kitaplar Fimler Müzikler</span>
+            <span class="arrow2">></span>
+            <span class="ls">Kitaplar</span>
+            <span class="arrow2">></span>
+            <span class="ls">Çocuk Kitapları</span>
+            <span class="arrow2">></span>
+            <span class="ls" style="color: rgb(190, 190, 190);">Timaş Çocuk Kitapları</span>
+        </div>
+        <div class="urun-resim">
+            <img src="{{ urun[5] }}" alt="">
+            <img src="https://images.hepsiburada.net/banners/s/0/104-104/kuponlu_104x104133117024665936870.png" alt="" class="kuponlu-urun">
+        </div>
+        <div class="information">
+            <div class="urun-title" style="display: inline-block;">
+                <span class="creator-seller">{{ urun[1] }} </span>
+                <span class="urun-name">{{ urun[2] }}</span>
+            </div>
+            <div class="rating">
+                <span class="rate">{{ urun[6] }}</span>
+                <div class="urun-star">
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <i class="fa-solid fa-star star"></i>
+                <a href="#" class="rate-num"><span style="font-weight: 900;">{{ urun[7] }}</span> Değerlendirme</a>
+                <i class="fa-solid fa-camera camera"></i>
+            </div>
+            <div class="seller">
+                <div class="seller-info">
+                    <span class="seller2">Satıcı: </span>
+                    <a href="#" class="seller-name">{{ urun[1] }}</a>
+                    <span class="seller-rate">9,5</span>
+                </div>
+            </div>
+            <div class="urun-price">
+                <span class="urun-price2">{{ urun[3] }} TL</span>
+                {% if urun[4] == "0" %}
+                <span class="urun-price2-old"></span>
+                {% else %}
+                    <span class="urun-price2-old">{{ urun[4] }} TL</span>
+                {% endif %}
+                <div class="add-cart2">
+                    <button class="add-cart-btn2"><i class="fa-solid fa-cart-plus"></i> Sepete Ekle</button>
+                </div>
+                <div class="gray-blank">
+                    <div class="white-blank"></div>
+                    <div class="white-blank"></div>
+                </div> 
+            </div>
+            </div>
+        </div>
+        <div style="height: 1000px;"></div>
+    </div>
+</div>
+
+{% endblock %}

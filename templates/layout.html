@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkiye'nin En Çok Tavsiye Edilen E-ticaret Markası Hepsiburada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://images.hepsiburada.net/assets/sfstatic/Content/images/favicon-32x32-new.png">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+        <div class="top-links">
+            <a href="#" class="top-l">Siparişlerim</a>
+            <a href="#" class="top-l">Süper Fiyat, Süper Teklif</a>
+            <a href="#" class="top-l">Yurt Dışından</a>
+            <a href="#" class="top-l">Kampanyalar</a>
+            <a href="#" class="top-l top-p">Girişimci Kadınlar</a>
+            <a href="#" class="top-l">Müşteri Hizmetleri</a>
+            <a href="#" class="top-l top-p">Hepsiburada Premium</a>
+            <a href="#" class="top-l">Hepsiburada'da Satıcı Ol</a>
+        </div> 
+
+        <div class="space"></div>
+
+        <div class="top">
+            <div class="logo">
+                <a href="/home" class="hepsiburada">hepsiburada</a>
+                <div class="logo-bot">
+                <span class="kesfet">keşfet</span>
+                <a href="#" class="prem">Premium'u</a>
+            </div>
+            </div>
+            <div class="searchbox">
+                <svg xmlns="http://www.w3.org/2000/svg" class="svg_icon bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg>
+                <input type="search" class="search" id="" placeholder="Ürün, kategori veya marka ara" >
+            </div>
+            <div class="location">
+                <a href="#" class="locate"><i class="fa-solid fa-location-dot loc-icon"></i> </i>Konum Seç</a>
+            </div>
+            <div class="login">
+
+                <div class="dropdown">
+                    {% if username != None %}
+                        <span class="log-in">Hesabım</span>
+                        <span class="register" style="width: 10ch; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;">{{ username }}</span>
+                        <div class="dropdown-content">
+                            <div class="kargo-bedava">
+                                <span class="pinktext" style="font-size: 13px;">PREMIUM</span>
+                                <span style="font-size: 13px;">'la avantajları katla!</span>
+                                <div class="white">
+                                    <img src="src/kargo.png" alt="" class="kargo">
+                                    <span class="kargo-beles">Kargo Bedava</span>
+                                </div>
+                            </div>
+                            <hr>
+                            <a href="#">Siparişlerim</a>
+                            <a href="#">Soru ve Taleplerim</a>
+                            <a href="#">Sana Özel Fırsatlar</a>
+                            <a href="#">Hepsipay</a>
+                            <a href="#">Kullanıcı Bilgilerim</a>
+                            <a href="#">Değerlendirmelerim</a>
+                            <hr>
+                            <a href="#">Beğendiklerim</a>
+                            <a href="#">Tüm Listelerim</a>
+                            <hr>
+                            <a href="#">Kuponlarım</a>
+                            <a href="/logout">Çıkış Yap</a>
+                        </div>
+                    {% else %}
+                        <span class="log-in">Giriş Yap</span>
+                        <span class="register">veya üye ol</span>
+                        <div class="dropdown-content">
+                            <div class="kargo-bedava">
+                                <span class="pinktext" style="font-size: 13px;">PREMIUM</span>
+                                <span style="font-size: 13px;">'la avantajları katla!</span>
+                                <div class="white">
+                                    <img src="src/kargo.png" alt="" class="kargo">
+                                    <span class="kargo-beles">Kargo Bedava</span>
+                                </div>
+                            </div>
+        
+                            <a href="/login">Giriş Yap</a>
+                            <a href="/register">Üye Ol</a>
+                            <hr>
+                            <a href="#">Siparişlerim</a>
+                            <a href="#">Soru ve Taleplerim</a>
+                            <a href="#">Sana Özel Fırsatlar</a>
+                            <a href="#">Hepsipay</a>
+                            <a href="#">Kullanıcı Bilgilerim</a>
+                            <a href="#">Değerlendirmelerim</a>
+                            <hr>
+                            <a href="#">Beğendiklerim</a>
+                            <a href="#">Tüm Listelerim</a>
+                            <hr>
+                            <a href="#">Kuponlarım</a>
+                        </div>
+                    {% endif %}
+                </div>
+
+                <!--<span class="log-in"><i class="far fa-user"></i>Giriş Yap</span>
+                <span class="register">veya üye ol</span>-->
+            </div>
+            <div class="cart">
+                <div class="cart-btn">
+                    <a href="/mycart" class="mycart"><i class="fa-solid fa-cart-shopping market"></i> Sepetim</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="lines">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <div class="line4"></div>
+            <div class="line5"></div>
+        </div>
+    <div class="back">
+        <div class="cato">
+            <div class="colum">
+                <span class="title">Elektronik</span>
+            </div>
+            <div class="colum">
+                <span class="title">Moda</span>
+            </div>
+            <div class="colum">
+                <span class="title">Ev, Yaşam,</span>
+                <span class="title">Kırtasiye, Ofis</span>
+            </div>
+            <div class="colum">
+                <span class="title">Oto, Bahçe, Yapı,</span>
+                <span class="title">Market</span>
+            </div>
+            <div class="colum">
+                <span class="title">Anne, Bebek,</span>
+                <span class="title">Oyuncak</span>
+            </div>
+            <div class="colum">
+                <span class="title">Spor,</span>
+                <span class="title">Outdoor</span>
+            </div>
+            <div class="colum">
+                <span class="title">Kozmetik,</span>
+                <span class="title">Kişisel Bakım</span>
+            </div>
+            <div class="colum">
+                <span class="title">Süpermarket,</span>
+                <span class="title">Pet Shop</span>
+            </div>
+            <div class="colum">
+                <span class="title">Kitap, Müsaik,</span>
+                <span class="title">Film, Hobi</span>
+            </div>
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+    {% block body_content %}
+    {% endblock %}
+</body>
+<script src="/static/script.js"></script>

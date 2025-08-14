@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepetim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://images.hepsiburada.net/assets/sfstatic/Content/images/favicon-32x32-new.png">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="first-line">
+            <div class="logo">
+                <a href="/home" class="hepsiburada logocart" style="font-size: 35px;">hepsiburada</a>
+                <div class="logo-bot">
+                    <span class="kesfet">keşfet</span>
+                    <a href="#" class="prem">Premium'u</a>
+                </div>
+            </div>
+            <div class="category">
+                <button>Kategoriler</button>
+            </div>
+            <div class="searchdiv">
+                <input type="search" placeholder="Ürün, kategori veya marka ara">
+            </div>
+            <div class="myorders">
+                <button><i class="fa-solid fa-bag-shopping" style="margin-right: 5px;"></i> Siparişlerim</button>
+            </div>
+            <div class="profile">
+                <button>FT</button>
+            </div>
+        </div>
+        <hr>
+        <div class="second-line">
+            <div class="sepet">
+                <h3>Sepetim</h3>
+                <span>(1 ürün)</span>
+            </div>
+            <div class="deleteurun">
+                <a href="">Ürünleri Sil <i class="fa-solid fa-trash-can"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="contentside">
+        <div class="icerik">
+            <div class="kupon">
+                <div class="kuponlarim">
+                    <a href=""><i class="fa-solid fa-gift"></i> Kuponlarım</a>
+                </div>
+                <div class="kupon-ekle">
+                    <a href="">Kupon kodu ekle +</a>
+                </div>
+            </div>
+        </div>
+        <div class="cartlist">
+            <div class="first">
+                <span>Satıcı:<strong>Hepsiburada</strong></span>
+            </div>
+            <hr style="margin-top: -8px; color: #eaeaea;">
+            <p><i class="fa-solid fa-truck" style="margin-left: 20px; margin-right: 10px;"></i>Yarın Kargoda</p>
+            {% for prod in urunler %}
+                <div class="second">
+                    <form method="post">
+                        <input type="checkbox" style="width: 24px; height: 24px;" class="checkbox1" checked>
+                        <img src="{{ prod[5] }}" alt="" class="urunimg">
+                        <a href="" class="urunname">{{ prod[1] }} {{ prod[2] }}</a>
+                        <div class="addurun">
+                            <form action="" method="post">
+                                {% if adet[loop.index-1] > 1 %}
+                                    <div class="left-button" style="height: 40px;">
+                                        <button name="minus1" value="{{ prod[0] }}"><i class="fa-solid fa-minus"></i></button>
+                                        <span>{{ adet[loop.index-1] }}</span>
+                                        <button type="submit" name="add1" value="{{ prod[0] }}"><i class="fa-solid fa-plus"></i></button>
+                                        <button name="delete" value="{{ prod[0] }}" style="position: relative; left: 110px; top: -35px;"><i class="fa-regular fa-trash-can"></i></button>
+                                    </div>
+                                {% else %}
+                                    <div class="left-button">
+                                        <button name="delete" value="{{ prod[0] }}"><i class="fa-regular fa-trash-can"></i></button>
+                                        <span>{{ adet[loop.index-1] }}</span>
+                                        <button name="add1" value="{{ prod[0] }}"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                {% endif %}
+                            </form>
+                            
+                        </div>
+                        <div class="pricetl">
+                            <span>{{ paralist["4"] }} TL</span>
+                        </div>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="sidebar">
+            <p>SEÇİLEN ÜRÜNLER ({{ urun_sayisi }})</p>
+            <p>{{ total }} TL</p>
+            <button>Alışverişi Tamamla</button>
+        </div>
+    </div>
+</body>
+</html>

